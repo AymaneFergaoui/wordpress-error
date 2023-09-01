@@ -1,1 +1,10 @@
+seems like something simply updated class-wp-widget-factory.php
+i dunno who the culprit is but
+it basically changes line 62 to
+
+        $this->widgets[ $widget ] = new $widget( );
+
+so simply fix line 62 with
+
+        $this->widgets[ $widget ] = new $widget( $widget, $widget );
 
